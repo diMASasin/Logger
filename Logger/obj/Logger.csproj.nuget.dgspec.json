@@ -1,31 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dmitriy\\Documents\\GitHub\\Napilnik\\Logger\\Logger\\Logger\\Logger.csproj": {}
+    "C:\\C#Projects\\Logger\\Logger\\Logger.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dmitriy\\Documents\\GitHub\\Napilnik\\Logger\\Logger\\Logger\\Logger.csproj": {
+    "C:\\C#Projects\\Logger\\Logger\\Logger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dmitriy\\Documents\\GitHub\\Napilnik\\Logger\\Logger\\Logger\\Logger.csproj",
+        "projectUniqueName": "C:\\C#Projects\\Logger\\Logger\\Logger.csproj",
         "projectName": "Logger",
-        "projectPath": "C:\\Users\\Dmitriy\\Documents\\GitHub\\Napilnik\\Logger\\Logger\\Logger\\Logger.csproj",
+        "projectPath": "C:\\C#Projects\\Logger\\Logger\\Logger.csproj",
         "packagesPath": "C:\\Users\\Dmitriy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dmitriy\\Documents\\GitHub\\Napilnik\\Logger\\Logger\\Logger\\obj\\",
+        "outputPath": "C:\\C#Projects\\Logger\\Logger\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Dmitriy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -33,17 +39,24 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -52,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
