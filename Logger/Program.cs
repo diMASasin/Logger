@@ -32,20 +32,32 @@
         }
     }
 
-    public class Pathfinder
+    public class LoggerDecorator : ILogger
     {
         private readonly ILogger[] _loggers;
 
-        public Pathfinder(params ILogger[] loggers)
+        public LoggerDecorator(params ILogger[] loggers)
         {
             _loggers = loggers;
         }
 
-        public void Find(string message)
+        public void WriteError(string message)
         {
             foreach (var logger in _loggers) 
                 logger.WriteError(message);
         }
+    }
+
+    public class Pathfinder
+    {
+        private readonly ILogger _logger;
+
+        public Pathfinder(ILogger logger)
+        {
+            _logger = logger;
+        }
+
+        public void Find(string message) => _logger.WriteError(message);
     }
 
     public class Program
@@ -56,7 +68,10 @@
             Pathfinder pathfinder1 = new Pathfinder(new FileLogWritter());
             Pathfinder pathfinder2 = new Pathfinder(new SecureLogWritter(new ConsoleLogWritter()));
             Pathfinder pathfinder3 = new Pathfinder(new SecureLogWritter(new FileLogWritter()));
-            Pathfinder pathfinder4 = new Pathfinder(new ConsoleLogWritter(), new SecureLogWritter(new FileLogWritter()));
+            
+            var decorator = new LoggerDecorator(new ConsoleLogWritter(), new SecureLogWritter(new FileLogWritter()));
+            Pathfinder pathfinder4 = new Pathfinder(decorator);
+            
             pathfinder.Find("adsda");
             pathfinder1.Find("hjm");
             pathfinder2.Find("www");
